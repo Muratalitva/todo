@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+    
+    <ul>
+        {%for do in todo%}
+        <br>
+            <li>
+                <strong>{{do.title}}</strong><br>
+                Описание:{{do.descriptions}}<br>
+                Статус выполнения:{{do.status}} <br>
+                Дата создания:{{do.created_at}} 
+                <br>
+           
+            </li>
+        {% endfor%}
+    </ul>
+    
+    <a href="#">Добавить новую задачу</a>
+</body>
+</html>
